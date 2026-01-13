@@ -1,4 +1,11 @@
-*.csv
 *.env
 .ipynb_checkpoints/
 .idea/
+
+# Ignore all data files
+data/raw/*
+data/processed/*
+
+# But keep folder structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
