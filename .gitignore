@@ -1,6 +1,7 @@
 *.env
 .ipynb_checkpoints/
 .idea/
+.vscode/
 
 # Ignore all data files
 data/raw/*
@@ -9,3 +10,9 @@ data/processed/*
 # But keep folder structure
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+
+# Archives (extra safety)
+*.zip
+*.tar
+*.tar.gz
+*.7z
