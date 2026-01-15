@@ -5,5 +5,7 @@
  Please download the data from:
 
  https://www.kaggle.com/competitions/spaceship-titanic
- 
-And unpack it in the data/raw/ folder.
+
+ And unpack it in the data/raw/ folder.
+
+ Please then run preprocess.ipynb file.
