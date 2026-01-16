@@ -23,9 +23,12 @@ X_train = X_train.drop(columns=['PassengerId'])
 X_test  = X_test.drop(columns=['PassengerId'])
 
 param_grid = {
-    'max_depth': [3,5,7],
-    'n_estimators': [100,200,300],
-    'learning_rate': [0.01,0.1,0.2]
+    'max_depth': [3, 5, 7],
+    'n_estimators': [100, 200, 300],
+    'learning_rate': [0.01, 0.1, 0.2],
+    'reg_alpha': [0, 0.1],
+    'reg_lambda': [1, 1.5],
+    'gamma': [0, 0.1],
 }
 
 grid = GridSearchCV(
@@ -46,5 +49,15 @@ submission = pd.DataFrame({
 
 submission.to_csv(OUTPUT_DIR / "xgb_predictions.csv", index=False)
 
-if __name__ == '__main__':
-    print("Predictions saved to:", OUTPUT_DIR / "xgb_predictions.csv")
+
+print("Predictions saved to:", OUTPUT_DIR / "xgb_predictions.csv")
+print("=" * 50)
+print("BEST MODEL INFORMATION")
+print("=" * 50)
+
+print(f"\nBest parameters found:")
+for param, value in grid.best_params_.items():
+    print(f"  {param}: {value}")
+
+print(f"\nBest cross-validation score: {grid.best_score_:.4f}")
+print(f"Best estimator index: {grid.best_index_}")
