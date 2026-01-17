@@ -16,3 +16,5 @@ data/processed/*
 *.tar
 *.tar.gz
 *.7z
+
+eda.py
