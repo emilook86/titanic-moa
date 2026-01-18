@@ -1,0 +1,30 @@
+,feature,importance
+0,CryoSleep,0.4918123
+9,HomePlanet_Earth,0.09560072
+10,HomePlanet_Europa,0.05987477
+3,RoomService,0.043301467
+6,Spa,0.034520503
+7,VRDeck,0.033043176
+4,FoodCourt,0.025124028
+20,CabinDeck_G,0.021908464
+13,CabinNum,0.02045287
+22,CabinSide_P,0.020025713
+18,CabinDeck_E,0.019971456
+1,Age,0.016643869
+16,CabinDeck_C,0.016063608
+24,Destination_55 Cancri e,0.013020364
+5,ShoppingMall,0.012669158
+19,CabinDeck_F,0.011578725
+15,CabinDeck_B,0.0113299815
+11,HomePlanet_Mars,0.011168537
+25,Destination_PSO J318.5-22,0.0077013024
+26,Destination_TRAPPIST-1e,0.007478516
+12,HomePlanet_MissingHP,0.005059892
+27,FirstNamesCount,0.004957441
+28,LastNamesCount,0.0047618626
+14,CabinDeck_A,0.0046848417
+8,NumberGroup,0.004280195
+2,VIP,0.0029661506
+17,CabinDeck_D,0.0
+23,CabinSide_S,0.0
+21,CabinDeck_T,0.0
