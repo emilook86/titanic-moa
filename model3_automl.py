@@ -36,12 +36,13 @@ y_train = y_train.iloc[:, 0]
 
 automl = AutoML()
 automl_settings = {
-    "time_budget": 300,
+    "time_budget": 3000,
     "metric": "accuracy",
     "task": "classification",
     "eval_method": "cv",
     "n_splits": 5,
     "seed": 42,
+    "retrain_full": True,
     "log_file_name": str(OUTPUT_DIR / "flaml_automl.log"),
 }
 
@@ -73,16 +74,17 @@ print(f"Best loss: {best_loss:.4f}")
 # BEST MODEL INFORMATION
 # ==================================================
 
-# Best estimator: lgbm
+# Best estimator: xgboost
 # Best config:
-#   n_estimators: 662
-#   num_leaves: 7
-#   min_child_samples: 71
-#   learning_rate: 0.5992896694559361
-#   log_max_bin: 6
-#   colsample_bytree: 0.9837397563360719
-#   reg_alpha: 0.02287618842773019
-#   reg_lambda: 1024.0
+#   n_estimators: 283
+#   max_leaves: 8
+#   min_child_weight: 0.24548583393846193
+#   learning_rate: 0.06456119721207722
+#   subsample: 0.9509358747888187
+#   colsample_bylevel: 0.7646612217167584
+#   colsample_bytree: 0.8516012204569093
+#   reg_alpha: 0.00117192269788344
+#   reg_lambda: 0.0019807174167241004
 
-# Best CV score: 0.8077
-# Best loss: 0.1923
+# Best CV score: 0.8132
+# Best loss: 0.1868
